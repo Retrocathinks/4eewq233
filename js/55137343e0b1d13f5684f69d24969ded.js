@@ -1,0 +1,4 @@
+;function fixInputPlaceholders(e,r){e(r).focus(function(){var r=e(this),t=r.attr('placeholder');if(t){r.attr('data-placeholder',t);r.attr('placeholder','')}}).blur(function(){var r=e(this),t=r.attr('data-placeholder');if(t){r.attr('placeholder',t)}})};function base64_decode(e){var t='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',a,i,l,h,p,d,c,o,r=0,f=0,u='',n=[];if(!e){return e};e+='';do{h=t.indexOf(e.charAt(r++));p=t.indexOf(e.charAt(r++));d=t.indexOf(e.charAt(r++));c=t.indexOf(e.charAt(r++));o=h<<18|p<<12|d<<6|c;a=o>>16&0xff;i=o>>8&0xff;l=o&0xff;if(d==64){n[f++]=String.fromCharCode(a)}
+else if(c==64){n[f++]=String.fromCharCode(a,i)}
+else{n[f++]=String.fromCharCode(a,i,l)}}
+while(r<e.length);u=n.join('');return decodeURIComponent(escape(u.replace(/\0+$/,'')))};
